@@ -1,96 +1,37 @@
-IAM Working Overview
+# EX-5 CLOUD DATA STORAGE SERVER
 
-AIM
+# REG NO : 212224240094
+# NAME : Monika A
 
-IAM Working Overview
+## AIM
 
-This repository provides a comprehensive overview of Identity and Access Management (IAM), focusing on its purpose, components, and implementation practices in cloud and enterprise environments. The aim is to educate developers, system admins, and security teams on IAM essentials and offer a hands-on guide for setting up and managing IAM policies.
+To create and configure an Amazon RDS MySQL DB instance with Multi-AZ deployment, connect it to a web application using a security group and DB subnet group, and perform CRUD (Create, Read, Update, Delete) operations on the database through the application.
 
-Introduction
-Identity and Access Management (IAM) is a framework of policies, technologies, and practices designed to manage digital identities and control access to resources. IAM helps ensure the right individuals have the right access to resources at the right time. It is crucial for securing sensitive data and resources in any organization, especially those operating in a cloud environment.
-Objectives
+## ALGORITHM
 
-•	To understand the purpose and benefits of IAM
-•	To learn about the core components of IAM
-•	To gain hands-on experience setting up and managing IAM policies
-•	To explore best practices for enhancing security through IAM
+1. Log in to the AWS Management Console.
+2. Create a DB Security Group allowing MySQL (3306) access from the Web Security Group.
+3. Create a DB Subnet Group with subnets in two Availability Zones.
+4. Launch an Amazon RDS MySQL Multi-AZ DB instance.
+5. Configure the DB instance with the required username, password, and database name. Wait until the database status becomes Available and copy the endpoint.
+6. Open the provided web application using the Web Server IP.
+7. Enter the RDS endpoint, database name, username, and password.
+8. Connect the application to the database.
+9. Test the application by adding, editing, viewing, and deleting records.
 
-Prerequisites
+## OUTPUT
 
-Before diving into IAM, you should have a foundational understanding of:
+<img width="1919" height="1086" alt="Screenshot 2026-08-20 142636" src="https://github.com/user-attachments/assets/c108406d-e6aa-429e-95d5-7479ea0cd8a8" />
 
-•	Cloud Services (AWS, Azure, Google Cloud)
-•	Basic Networking and Security Concepts
-•	Programming (Python, Bash, or any language preferred for API interactions)
-•	Version Control (Git for managing this project)
-
-Core Components of IAM
-
-IAM encompasses several core components that work together to provide secure access management:
-
-•	Identities: Represent users, roles, or services accessing resources. Identities can be internal users, external partners, or applications.
-•	Policies: Define permissions for each identity, specifying what actions they can perform on which resources.
-•	Roles: Enable resource-specific permissions that can be assumed by users or services, allowing temporary access as needed.
-•	Authentication: The process of verifying an identity, typically through credentials such as passwords or tokens.
-•	Authorization: Determines what an authenticated identity can access or modify, enforced through policies.
-
-IAM Best Practices
-
-1.	Use the Principle of Least Privilege: Limit permissions to the minimum necessary.
-2.	Enable Multi-Factor Authentication (MFA): Protect against unauthorized access.
-3.	Implement Role-Based Access Control (RBAC): Group permissions by roles to simplify management.
-4.	Regularly Audit and Monitor Access Logs: Stay aware of access patterns and detect suspicious activities.
-5.	Rotate and Manage Access Keys Carefully: Reduce risks by rotating keys frequently.
-
-Setup Guide
-
-1.	Configure IAM Roles and Policies
-
-•	Step 1: Create an IAM role with specific permissions for your users or applications.
-•	Step 2: Attach policies to roles, limiting permissions according to your needs.
-•	Step 3: Test access by assuming roles and attempting various actions.
-
-2.	Enable Multi-Factor Authentication (MFA)
-
-•	Step 1: Go to your IAM console and select your user account.
-•	Step 2: Choose "Security credentials" and follow instructions to enable MFA.
-
-3.	Set Up Identity Federation
-
-•	Step 1: Configure identity providers (IdP) like SAML or OpenID Connect for single sign-on.
-•	Step 2: Map IdP roles to IAM roles for seamless access control.
-
-4.	Monitor and Audit with CloudTrail
-
-•	Step 1: Enable logging of all IAM activity using services like AWS CloudTrail.
-•	Step 2: Regularly review logs to ensure compliance with security policies.
-
-Examples
-
-Here are a few basic examples of IAM commands and scripts:
-•	Creating a User:
-aws iam create-user --user-name NewUser
-•	Attaching a Policy to a User:
-aws iam attach-user-policy --user-name NewUser --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
-•	Creating an Access Key for a User:
-aws iam create-access-key --user-name NewUser
+<img width="1880" height="907" alt="image" src="https://github.com/user-attachments/assets/e2085cd7-bba0-4c33-8214-54a1ba5c6303" />
+<img width="1886" height="922" alt="image" src="https://github.com/user-attachments/assets/e40dd114-105c-4ec2-8b52-0daa921d49f9" />
+<img width="1887" height="925" alt="image" src="https://github.com/user-attachments/assets/9ee07bfc-7141-4fc4-9efb-a3c2bd5a9f3b" />
+<img width="1451" height="572" alt="image" src="https://github.com/user-attachments/assets/b13b6156-5e2a-47ce-8ee3-50e19c614ef3" />
+<img width="1811" height="880" alt="image" src="https://github.com/user-attachments/assets/0a93c459-03cd-4f72-9bd5-35201bef43d4" />
+<img width="1495" height="910" alt="image" src="https://github.com/user-attachments/assets/64991ae3-af3b-4af3-a2e7-8fc6fa3b9adb" />
 
 
 
+## RESULT
 
-
-
-While IAM is essential for managing access control, it does have limitations:
-•	Complex policies can lead to unintended access if not configured carefully.
-•	Requires continuous auditing and updates as roles and permissions evolve.
-•	Proper training and understanding of IAM policies are critical for avoiding misconfigurations.
-
-
-Conclusion
-IAM is a foundational aspect of security in cloud environments, helping control and monitor access to resources effectively. By following best practices and regularly auditing IAM configurations, organizations can maintain robust access control, protecting their digital assets from unauthorized access.
-
-
-
-
-
-
+The Amazon RDS MySQL Multi-AZ DB instance was successfully created and connected to the web application, and CRUD operations were performed successfully on the database.
